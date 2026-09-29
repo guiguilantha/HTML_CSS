@@ -1,28 +1,152 @@
 <!DOCTYPE html>
 <html lang="fr">
-  
-    <head>
-        <meta name="description" content="Restaurant traditionnel comme chez mamie">
-        <meta charset="utf-8">
-        <meta name="author" content="Guillaume R.">
-        <title>Restaurant traditionnel - Cuisine comme chez mamie</title>
-        <link href="style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    </head>
 
+<head>
+    <meta name="description" content="Restaurant traditionnel comme chez mamie">
+    <meta charset="utf-8">
+    <meta name="author" content="Guillaume R.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurant traditionnel - Cuisine comme chez mamie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        
+        
+        div.presentation {
+            background-image: url("https://fastly.picsum.photos/id/493/3872/2592.jpg?hmac=PWm2bsTKWkChWATD_2AD0F_GNifmGvQDPMHZp2sWhk0");
+            background-size: cover;
+            background-position: center;
+            padding: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h1,
+            p {
+                width: 100%;
+                max-width: 500px; 
+                box-sizing: border-box;
+            }
+
+            h1 {
+                color: #2b2118;
+                text-align: left;
+                font-family: "Playfair Display", serif;
+                letter-spacing: 0.12em;
+                padding: 20px;
+                border: none;
+                border-bottom: 2px solid #b5893c;
+                background: rgba(255, 255, 255, 0.8);
+                font-size: 1.6rem;
+            }
+
+            p {
+                color: #d39b39;
+                line-height: 1.6;
+                text-align: left;
+                font-family: "Helvetica Neue", Arial, sans-serif;
+                background: rgba(53, 51, 51, 0.8);
+                padding: 12px 20px;
+            }
+
+            button {
+                padding: 12px 28px;
+                color: white;
+                background: #f17407;
+                border: none;
+                border-radius: 3px;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: background 0.25s;
+                &:hover {
+                    background: #b5893c;
+                }
+            }
+        }
+
+        
+        
+        div.cuisine {
+            background-color: #f17407;
+            h2 {
+                color: #2b2118;
+                text-align: center;
+                font-family: "Playfair Display", serif;
+                letter-spacing: 0.12em;
+                padding: 20px;
+                border: none;
+                border-bottom: 2px solid #b5893c;
+                background: rgba(255, 255, 255, 0.8);
+                font-size: 1.6rem;
+            }
+            p {
+                color: #4d4840;
+                line-height: 1.6;
+                text-align: center;
+                font-family: "Helvetica Neue", Arial, sans-serif;
+                background: rgba(255, 255, 255, 0.8);
+                padding: 12px 20px;
+            }
+
+            .cuisine-image {
+                position: relative;  
+                max-width: 900px;
+                margin: 0 auto;
+            }
+
+            .cuisine-image img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .etapes {
+                position: absolute;   
+                inset: 0;            
+                display: flex;
+                justify-content: space-around;
+                align-items: center;  
+                gap: 16px;
+                padding: 16px;
+            }
+
+            .etapes > div {
+                flex: 1;
+                background: rgba(255, 255, 255, 0.85);
+                padding: 12px;
+                text-align: center;
+            }
+
+            .etapes p {
+                background: none;     
+                padding: 0;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
 
 <body>
 
     <header>
         <div class="header">
-            <img width="25" src="Image.png" alt="Logo de la maison">
-
-            <nav class="crumbs">
-                <ol>
-                    <li class="crumb"><a href="#">RESTAURANT TRADITIONNEL</a></li>
-                    <li class="crumb"><a href="#">Apprendre à cuisiner</a></li>
-                </ol>
-            </nav>
+            <details class="menu"> 
+                <img
+                    src="https://svgsilh.com/svg/2400338.svg"
+                    alt="logo toque de chef"
+                >
+                <summary> ☰ </summary> 
+                <nav class="crumbs"> 
+                    <ol> 
+                        <li class="crumb">
+                            <a href="#">RESTAURANT TRADITIONNEL</a>
+                        </li> 
+                        <li class="crumb">
+                            <a href="#">Apprendre à cuisiner</a>
+                        </li> 
+                    </ol> 
+                </nav> 
+            </details>
         </div>
     </header>
 
@@ -38,7 +162,6 @@
             <button>En savoir plus</button>
         </div>
 
-
         <div class="cuisine">
             <h2>Apprendre à cuisiner</h2>
 
@@ -47,30 +170,32 @@
                 Donec pulvinar venenatis justo eu congue.
             </p>
 
-            <img
-                width="500"
-                src="https://fastly.picsum.photos/id/488/1772/1181.jpg?hmac=psl3qLyDefO6AYqU4TJQ8PNCjS8RdPiP_vRLB8WPVjY"
-                alt="Une salade de légumes de saison"
-            >
+            <div class="cuisine-image">
+                <img
+                    src="https://fastly.picsum.photos/id/488/1772/1181.jpg?hmac=psl3qLyDefO6AYqU4TJQ8PNCjS8RdPiP_vRLB8WPVjY"
+                    alt="Une salade de légumes de saison"
+                >
 
-            <div class="etape1">
-                <h3>1</h3>
-                <p>Lorem ipsum dolor sit amet...</p>
-            </div>
+                <div class="etapes">
+                    <div class="etape1">
+                        <h3>1</h3>
+                        <p>Lorem ipsum dolor sit amet...</p>
+                    </div>
 
-            <div class="etape2">
-                <h3>2</h3>
-                <p>Integer imperdiet sem ut nibh mattis pellentesque...</p>
-            </div>
+                    <div class="etape2">
+                        <h3>2</h3>
+                        <p>Integer imperdiet sem ut nibh mattis pellentesque...</p>
+                    </div>
 
-            <div class="etape3">
-                <h3>3</h3>
-                <p>Interdum et malesuada fames ac ante ipsum primis...</p>
+                    <div class="etape3">
+                        <h3>3</h3>
+                        <p>Interdum et malesuada fames ac ante ipsum primis...</p>
+                    </div>
+                </div>
             </div>
         </div>
 
     </main>
-
 
     <footer>
         <div class="footer-partie">
@@ -90,6 +215,5 @@
     </footer>
 
 </body>
-
 
 </html>
